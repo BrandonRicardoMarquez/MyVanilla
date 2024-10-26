@@ -2,6 +2,7 @@ import { Header } from '../components/Header.js';
 import { UserCard } from '../components/UserCard.js';
 import { Table} from '../components/Table/Table.js';
 import { makeAlert } from '../components/Table/functions.js';
+import { Reporte } from '../components/Table/Reporte.js'; 
 
 export function Home() {
   const container = document.createElement('div');
@@ -36,6 +37,9 @@ export function Home() {
 
   container.appendChild(Table(users, true, makeAlert));
   container.appendChild(Table(otherUsers, true, makeAlert));
+
+  cardContainer.appendChild(Reporte());
+ 
 
 
   return container;
