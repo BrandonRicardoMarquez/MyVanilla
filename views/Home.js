@@ -37,8 +37,7 @@ export function Home() {
 
   container.appendChild(Table(users, true, makeAlert));
   container.appendChild(Table(otherUsers, true, makeAlert));
-
-  cardContainer.appendChild(Reporte());
+  cardContainer.appendChild(Reporte(users , true, makeAlert));
  
 
 

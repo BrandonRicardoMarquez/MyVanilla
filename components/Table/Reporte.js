@@ -1,5 +1,5 @@
 //exportame la funcion Reporte
-export function Reporte() {
+export function Reporte(users, visible = true, makeAlert) {
     // Creo una tabla dinámica para pintar los datos: Usuario, Edad y Acción
     const table = document.createElement('table');
     table.classList.add('w-full', 'text-sm', 'text-left', 'rtl:text-right', 'text-gray-500', 'dark:text-gray-400', 'shadow-md', 'sm:rounded-lg');
@@ -30,11 +30,7 @@ export function Reporte() {
     const tbody = document.createElement('tbody');
     tbody.classList.add('bg-white', 'divide-y', 'divide-gray-200', 'dark:divide-gray-700');
     
-    const users = [
-        { name: 'Juan Pérez', age: 25 },
-        { name: 'Ana Gómez', age: 30 },
-        { name: 'Carlos Ruiz', age: 22 }
-      ];
+
     users.forEach(user => {
         const tr = document.createElement('tr');
         tr.classList.add('odd:bg-white', 'odd:dark:bg-gray-900', 'even:bg-gray-50', 'even:dark:bg-gray-800', 'border-b', 'dark:border-gray-700');
@@ -48,10 +44,15 @@ export function Reporte() {
         td2.classList.add('px-6', 'py-4');
         
         const td3 = document.createElement('td');
-        const editLink = document.createElement('a');
+        const editLink = document.createElement('button');
         editLink.textContent = 'Edit';
-        editLink.href = '#';
+        editLink.onclick = () => {
+            makeAlert(user.name);
+        }
         editLink.classList.add('font-medium', 'text-blue-600', 'dark:text-blue-500', 'hover:underline');
+        editLink.hidden = !visible;
+        
+
         td3.appendChild(editLink);
         td3.classList.add('px-6', 'py-4');
 
