@@ -44,7 +44,7 @@ export function analisis (usera,makeAlert){
         const obtenerpeso = document.createElement('button');
         obtenerpeso.textContent = 'peso';
         obtenerpeso.onclick = () => {
-            makeAlert(client.peso);
+            makeAlert(client.peso + " kg" );
         }
         obtenerpeso.classList.add('font-medium', 'text-blue-600', 'dark:text-blue-500', 'hover:underline');
         td3.appendChild(obtenerpeso);
