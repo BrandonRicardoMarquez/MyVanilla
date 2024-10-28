@@ -26,9 +26,9 @@ export function Home() {
   ];
 
   const usera = [
-    { name: 'Sage', estatura: 1.52 , peso: 241 },
-    { name: 'Usa', estatura: 1.57 , peso: 165 },
-    { name: 'Inukai', estatura: 1.65 ,  peso: 81 }
+    { name: 'Sage-chan', estatura: 1.52 , peso: 241 },
+    { name: 'Usa-san', estatura: 1.57 , peso: 165 },
+    { name: 'Inukai-san', estatura: 1.65 ,  peso: 81 }
   ];
 
   // Agregar cada tarjeta de usuario
